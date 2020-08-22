@@ -66,6 +66,13 @@ class Orders extends Component {
                 )
             })
         }
+        else{
+            array.push(
+            <div style={{ margin: 20, width: "90%", height: 230, textAlign: "center" }}>
+                <h2>Please select some items and check here...</h2>
+            </div>
+                )
+            }
         return array
     }
 

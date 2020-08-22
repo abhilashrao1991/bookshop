@@ -98,7 +98,7 @@ class Cart extends Component {
                     <h4 style={{ marginRight: 480 }}>Shipping Bag</h4>
                 </div>
                 <div style={{ height: 450, width: "100%", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
-                    <div style={{ height: 400, width: "40%", background: "lightgray", margin: 15, display: "flex", flexDirection: "column", alignItems: "flex-start", paddingLeft: 10 }}>
+                    <div style={{ height: 400, width: "40%", background: "#607D8B", margin: 15, display: "flex", flexDirection: "column", alignItems: "flex-start", paddingLeft: 10 }}>
                         <h4 style={{ color: "#fff" }}>Name : Cutomer name  </h4>
                         <h4 style={{ color: "#fff" }}>MobileNumber : 91234567890  </h4>
                         <h4 style={{ color: "#fff" }}>Address :   15-156 , 2nd line ,Ramarao street </h4>

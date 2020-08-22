@@ -33,15 +33,15 @@ class home extends Component {
         count++
         // if (count <= 5) {
           array.push(
-          <div style={{ width: 135, height: 200, border: "1px solid lightgray", margin: 7, float: "left" }}>
-            <div style={{ width: 135, height: 135, border: "1px solid lightgray", }}>
-              <img src={item.image} style={{ width: 135, height: 135,cursor:"pointer" }} onClick ={
+          <div style={{ width: 150, height: 200, border: "1px solid lightgray", margin: 25, float: "left" }}>
+            <div style={{ width: 150, height: 135, border: "1px solid lightgray", }}>
+              <img src={item.image} style={{ width: 150, height: 135,cursor:"pointer" }} onClick ={
                 ()=>{
                   this.props.history.push({pathname:"/bookdetails",state:item})
                 }
               } alt={item.bookname}></img>
             </div>
-            <div style={{ width: 135, height: 65, border: "1px solid lightgray",background:"lightgray",textAlign:"center",cursor:"pointer" }}  onClick ={()=>{
+            <div style={{ width: 150, height: 65, border: "1px solid lightgray",background:"lightgray",textAlign:"center",cursor:"pointer" }}  onClick ={()=>{
                 this.props.history.push({pathname:"/bookdetails",state:item})
               }}>
               <p style ={{fontSize:10}}>Title :  {item.bookname.slice(0,10)}</p>
@@ -72,7 +72,6 @@ class home extends Component {
   }
 
   render() {
-    console.log(this.props, "props");
     return (
       <div style={{ margin: 70,  width: "90%", border: "3px solid lightgray" }}>
         <div style={{ height: 40, width: "100%", border: "2px solid lightgray", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", background: "lightgray" }}>

@@ -28,7 +28,7 @@ class SlectedBookpage extends Component {
     render() {
         console.log(this.props);
         return (
-            <div style={{ margin: 70, height: 400, width: "90%", border: "3px solid lightgray" }}>
+            <div style={{ margin: "15px auto", height: 400, width: "90%", border: "5px solid lightgray" }}>
                 <div style={{ height: 40, width: "100%", border: "2px solid lightgray", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", background: "lightgray" }}>
                     <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-evenly", width: 400, height: 40, }}>
                         <div style={{ borderRight: "1px solid #000", display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-evenly", width: 200, height: 40, }}>
@@ -72,9 +72,9 @@ class SlectedBookpage extends Component {
                                         this.props.history.push("/cart")
                                     }
                                 } >
-                                    <p style={{ fontSize: 10, height: 10, width: 100, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }}>Add to Cart</p>
+                                    <p style={{ fontSize: 10, height: 10, width: 100, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff"}}>Add to Cart</p>
                                 </div>
-                                <div style={{ background: "#FA8072", cursor: "pointer" }}
+                                <div style={{ background: "#FA8072", cursor: "pointer", marginLeft: 20  }}
                                 onClick={
                                     () => {
                                         this.props.OnSetOrder(this.props.location.state)
@@ -86,7 +86,7 @@ class SlectedBookpage extends Component {
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div style={{marginLeft: 20 }}>
                         {this.state.bookdescription}
                     </div>
                 </div>

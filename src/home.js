@@ -73,7 +73,7 @@ class home extends Component {
 
   render() {
     return (
-      <div style={{ margin: 70,  width: "90%", border: "3px solid lightgray" }}>
+      <div style={{ margin: "15px auto",  width: "90%", border: "5px solid lightgray" }}>
         <div style={{ height: 40, width: "100%", border: "2px solid lightgray", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", background: "lightgray" }}>
           <h3 style={{ marginLeft: 15 }}>eCommerce Site</h3>
           <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", marginRight: 10, width: 200, height: 40 }}>

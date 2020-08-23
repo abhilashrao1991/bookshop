@@ -65,7 +65,7 @@ class Cart extends Component {
     }
     render() {
         return (
-            <div style={{ margin: 70, height: "auto", width: "90%", border: "3px solid lightgray" }}>
+            <div style={{ margin: "15px auto", height: "auto", width: "90%", border: "5px solid lightgray" }}>
                 <div style={{ height: 40, width: "100%", border: "2px solid lightgray", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", background: "lightgray" }}>
                     <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-evenly", width: 400, height: 40, }}>
                         <div style={{ borderRight: "1px solid #000", display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-evenly", width: 200, height: 40, }}>

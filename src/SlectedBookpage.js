@@ -26,7 +26,6 @@ class SlectedBookpage extends Component {
     }
 
     render() {
-        console.log(this.props);
         return (
             <div style={{ margin: "15px auto", height: 400, width: "90%", border: "5px solid lightgray" }}>
                 <div style={{ height: 40, width: "100%", border: "2px solid lightgray", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", background: "lightgray" }}>

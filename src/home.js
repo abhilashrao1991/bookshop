@@ -26,14 +26,12 @@ class home extends Component {
   }
   booksarrayreturnfun = () => {
     let array = []
-    // let pusharry =[]
     let count = 0
     {
       this.state.booksarray.map((item, index) => {
         count++
-        // if (count <= 5) {
           array.push(
-          <div style={{ width: 150, height: 200, border: "1px solid lightgray", margin: 25, float: "left" }}>
+          <div key={index+1} style={{ width: 150, height: 200, border: "1px solid lightgray", margin: 25, float: "left" }}>
             <div style={{ width: 150, height: 135, border: "1px solid lightgray", }}>
               <img src={item.image} style={{ width: 150, height: 135,cursor:"pointer" }} onClick ={
                 ()=>{
@@ -45,27 +43,16 @@ class home extends Component {
                 this.props.history.push({pathname:"/bookdetails",state:item})
               }}>
               <p style ={{fontSize:10}}>Title :  {item.bookname.slice(0,10)}</p>
-              {/* <p style ={{fontSize:10}}>Descrpition :{item.descrpition.slice(0,15)}</p> */}
               <div style ={{background:"#FA8072",cursor:"pointer"}} onClick ={()=>{
                 this.props.history.push({pathname:"/bookdetails",state:item})
               }}>
                 <p style ={{fontSize:10, height: 30, display:"flex",alignItems:"center",justifyContent:"center"}}>Buy Button</p>
               </div>
 
-              {/* <h6>{item.bookname}</h6>
-              <h6>{item.bookname}</h6>
-              <h6>{item.bookname}</h6> */}
-              {/* <h6>{item.descrpition.slice(0,10)}</h6> */}
             </div>
 
           </div>
           )
-        // }
-        //  else {
-        //   array.push( <div style={{ width: 125, height: 150, background: "red" }}>
-
-        //   </div>)
-        // }
       })
     }
     return array

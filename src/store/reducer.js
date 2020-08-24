@@ -168,7 +168,6 @@ const initialState = {
 }
 const reducer = (state = initialState, action) => {
     const newState = { ...state }
-      console.log(action);
     switch (action.type) {
         case "SET_CART":
             return {

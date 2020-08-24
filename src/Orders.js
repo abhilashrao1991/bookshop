@@ -17,15 +17,6 @@ class Orders extends Component {
         today = mm + '/' + dd + '/' + yyyy;
         this.setState({ today: today ,ordersarray:this.props.value.ordersarray })
         
-        // if (this.props.value.ordersarray.length != 0) {
-        //     const { ordersarray } = this.state
-        //     ordersarray.push(this.props.value.ordersarray)
-        //     this.setState({ ordersarray })
-        // } else {
-
-        // }
-
-        //  this.state.ordersarray =  this.props.location.value.ordersarray
 
     }
     
@@ -34,7 +25,7 @@ class Orders extends Component {
         if(this.state.ordersarray.length !=0){
             this.state.ordersarray.map((item,index)=>{
                 array.push(
-                    <div style={{ margin: 20, display: 'flex', flexDirection: "column", width: "90%", height: 230, justifyContent: "space-evenly", border: "2px solid lightgray", }}>
+                    <div key={index+1} style={{ margin: 20, display: 'flex', flexDirection: "column", width: "90%", height: 230, justifyContent: "space-evenly", border: "2px solid lightgray", }}>
                     <div style={{ height: 30, width: "99.9%", border: "2px solid lightgray", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", background: "lightgray" }}>
                         <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-evenly", width: 400, height: 40, }}>
                             <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-evenly", width: 200, height: 40, }}>
@@ -66,18 +57,10 @@ class Orders extends Component {
                 )
             })
         }
-        else{
-            array.push(
-            <div style={{ margin: 20, width: "90%", height: 230, textAlign: "center" }}>
-                <h2>Please select some items and check here...</h2>
-            </div>
-                )
-            }
         return array
     }
 
     render() {
-        console.log(this.state.ordersarray, "finlalalala");
 
         return (
             <div style={{ margin: "15px auto", height: "auto", width: "90%", border: "5px solid lightgray" }}>
@@ -109,7 +92,9 @@ class Orders extends Component {
                     </div>
                 </div>
 
-                {this.retrunfun()}
+               {this.state.ordersarray.length ==0 ?  <div style={{ margin: 20, width: "90%", height: 230, textAlign: "center" }}>
+                <h2>Please select some items and check here...</h2>
+            </div>: this.retrunfun()} 
                 
             </div>
         );
